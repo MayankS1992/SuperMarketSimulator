@@ -13,7 +13,7 @@ public class IthreadImpl implements Ithread {
 	IthreadImpl(){
 		
 	}
-		public IthreadImpl(ArrayList linkedQueues, int i, BlockingQueue[] queue) { 
+		public IthreadImpl(ArrayList linkedQueues, int i, BlockingQueue[] queue, Cashier[] consumer) { 
 
 
 			Feeder producer = new Feeder(queue);
@@ -61,6 +61,11 @@ public class IthreadImpl implements Ithread {
 	        list.add(conss7);
 	        list.add(conss8);
 //	        System.out.print(list);
+	        
+	        
+	        CreateGUI graphicsObject = new CreateGUI(consumer, producer);
+	        graphicsObject.setVisible(true);
+	        
 	        
 	        prodd.start();
 	        conss1.start();
