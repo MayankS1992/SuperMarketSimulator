@@ -26,7 +26,9 @@ public class MainClass extends Applet {
 		System.out.print(linkedQueues);		
 		int i=0;
 		System.out.print(linkedQueues);
-		IthreadImpl list = new IthreadImpl(linkedQueues,i, queue);
+		IthreadImpl list = new IthreadImpl(linkedQueues,i, queue, consumer);
+		
+		
 //		NetAnalysis analysis = new NetAnalysis();
 		Calculator c=new Calculator();
 	    System.out.println("no of customers:"+c.getIncrement1());
